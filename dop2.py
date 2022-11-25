@@ -10,10 +10,11 @@ mas = [[0, 0, 0],
 for i in range(len(mas)):
     if not (mas[i][0] or mas[i][1] or mas[i][2]) == (
             not (mas[i][0]) and not (mas[i][1]) and not (mas[i][2])):
-        print(
-            f'выражение истинно для значений X={mas[i][0]}, Y={mas[i][1]}, Z ='
-            f'{mas[i][2]}')
+        answer = True
     else:
-        print(
-            f'выражение  ложно  для значений X={mas[i][0]}, Y={mas[i][1]}, Z ='
-            f'{mas[i][2]}')
+        answer = False
+        break
+if answer:
+    print('выражение истинно для всех значений')
+else:
+    print('выражение ложно')
